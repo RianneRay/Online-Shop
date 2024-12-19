@@ -16,141 +16,105 @@ A simple online shop application built with the **MERN stack** (MongoDB, Express
 
 ## Tech Stack
 
-- **Frontend**: React, Chakra UI
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
-- **Build/Package Management**: npm
+- **Frontend**:
+  - **React**: JavaScript library for building user interfaces.
+  - **Chakra UI**: React component library for creating accessible and styled components.
+  - **React Router**: For routing and navigation within the React app.
+  
+- **Backend**:
+  - **Node.js**: JavaScript runtime for the server.
+  - **Express**: Web framework for Node.js to build the API.
+  - **MongoDB**: NoSQL database for storing product data.
+  - **Mongoose**: ODM (Object Document Mapping) library for MongoDB.
+  
+- **Development Tools**:
+  - **Nodemon**: For automatic server restarts during development.
+  - **CORS**: Middleware to handle cross-origin requests between React frontend and Express backend.
 
 ---
 
-## Installation and Usage
-
-Follow these steps to clone and run the project locally:
+## Installation
 
 ### Prerequisites
-
 Make sure you have the following installed:
-- **Node.js**: [Download Node.js](https://nodejs.org/)
-- **npm**: Comes with Node.js.
-- **MongoDB**: [Install MongoDB](https://www.mongodb.com/try/download/community)
+- [Node.js](https://nodejs.org/) (latest LTS version)
+- [MongoDB](https://www.mongodb.com/) (you can also use MongoDB Atlas for cloud-based DB)
+- [Git](https://git-scm.com/) for version control
 
-### Steps
+### Steps to Run the Project Locally
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/RianneRay/Online-Shop.git
-   cd Online-Shop
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/RianneRay/Online-Shop.git
+    cd Online-Shop
+    ```
 
-2. Install dependencies:
+2. **Install server dependencies**:
+    - Navigate to the backend folder and install dependencies:
+    ```bash
+    cd backend
+    npm install
+    ```
 
-For the root project:
+3. **Install frontend dependencies**:
+    - Navigate to the frontend folder and install dependencies:
+    ```bash
+    cd ../frontend
+    npm install
+    ```
 
-npm install
+4. **Set up environment variables for the backend**:
+    - Install `dotenv` to manage environment variables:
+      ```bash
+      npm install dotenv
+      ```
+    - Create a `.env` file in the backend project root directory and add your MongoDB connection string:
+      ```plaintext
+      MONGO_URI=your_mongodb_connection_string
+      ```
 
-For the frontend:
+5. **Build the frontend**:
+    - Navigate to the frontend directory and run the build command:
+      ```bash
+      npm run build
+      ```
 
-npm install --prefix frontend
+6. **Start the backend server**:
+    - Navigate to the backend directory and start the server:
+      ```bash
+      cd ../backend
+      npm start
+      ```
 
+7. **Start the frontend server**:
+    - Navigate to the frontend directory and start the React development server:
+      ```bash
+      cd ../frontend
+      npm start
+      ```
 
-
-3. Configure environment variables:
-
-Create a .env file in the backend directory.
-
-Add the following keys:
-
-MONGO_URI=your-mongodb-uri
-PORT=4000
-
-
-
-4. Build the frontend:
-
-npm run build
-
-
-5. Start the production server:
-
-npm run start
-
-
-6. Open your browser and navigate to:
-
-http://localhost:4000
-
-
-
-
----
-
-Project Structure
-
-Online-Shop/
-├── backend/
-│   ├── server.js          # Backend entry point
-│   ├── models/            # Database models
-│   ├── routes/            # API routes
-├── frontend/
-│   ├── public/            # Static assets
-│   ├── src/
-│   │   ├── components/    # Reusable UI components
-│   │   ├── pages/         # Page components
-│   │   └── store/         # State management (if applicable)
-├── package.json           # Root project scripts and dependencies
-├── README.md              # Project documentation
-
+8. **Visit the app**:
+    - Once both the frontend and backend servers are running, open your browser and visit:
+      - [Frontend: http://localhost:3000](http://localhost:3000)
+      - [Backend API: http://localhost:4000](http://localhost:4000)
 
 ---
 
-Scripts
+## Usage
 
-Here are the key npm scripts for this project:
-
-Build:
-
-npm run build
-
-This installs dependencies for the root project and the frontend, then builds the frontend.
-
-Start:
-
-npm run start
-
-Starts the production server.
-
-
+Once the app is running, you can:
+- **Create new products** using the "Create Product" button on the homepage.
+- **View products** displayed on the homepage.
+- **Update or delete products** by clicking the respective buttons on each product card.
 
 ---
 
-Contributing
+## Environment Variables
 
-Contributions are welcome! Follow these steps to contribute:
+To run the backend project, you need to set up environment variables:
+- Create a `.env` file in the backend directory.
+- Use the `.env.example` file as a reference. Add your MongoDB connection string, for example:
 
-1. Fork the repository.
-
-
-2. Create a new branch for your feature:
-
-git checkout -b feature-name
-
-
-3. Commit your changes:
-
-git commit -m "Add feature-name"
-
-
-4. Push the branch:
-
-git push origin feature-name
-
-
-5. Open a pull request.
-
-
----
-
-Acknowledgments
-
-Built with love using the MERN stack and Chakra UI.
-
-Inspired by the need for simple CRUD-based applications.
+```plaintext
+MONGO_URI=your_mongodb_connection_string
+```
