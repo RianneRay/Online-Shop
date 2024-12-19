@@ -29,7 +29,6 @@ A simple online shop application built with the **MERN stack** (MongoDB, Express
   
 - **Development Tools**:
   - **Nodemon**: For automatic server restarts during development.
-  - **CORS**: Middleware to handle cross-origin requests between React frontend and Express backend.
 
 ---
 
@@ -80,23 +79,16 @@ Make sure you have the following installed:
       ```
 
 6. **Start the backend server**:
-    - Navigate to the backend directory and start the server:
+    - Navigate to the root directory and start the server:
       ```bash
-      cd ../backend
-      npm start
+      npm run start
       ```
 
-7. **Start the frontend server**:
-    - Navigate to the frontend directory and start the React development server:
-      ```bash
-      cd ../frontend
-      npm start
-      ```
 
-8. **Visit the app**:
+7. **Visit the app**:
     - Once both the frontend and backend servers are running, open your browser and visit:
-      - [Frontend: http://localhost:3000](http://localhost:3000)
-      - [Backend API: http://localhost:4000](http://localhost:4000)
+      - [Root: http://localhost:4000](http://localhost:4000)
+
 
 ---
 
@@ -118,3 +110,9 @@ To run the backend project, you need to set up environment variables:
 ```plaintext
 MONGO_URI=your_mongodb_connection_string
 ```
+
+## Contact
+
+If you have any questions, feel free to reach out to:
+- **Email**: [riannerayrelevo04@gmail.com](mailto:riannerayrelevo04@gmail.com)
+- **GitHub**: [RianneRay](https://github.com/RianneRay)
