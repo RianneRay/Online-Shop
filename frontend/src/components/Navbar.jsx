@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Container, Flex, Text, HStack, Button, useColorMode } from '@chakra-ui/react';
-import { PlusSquareIcon } from '@chakra-ui/icons';
-import { CiCloudMoon, CiCloudSun } from 'react-icons/ci';
+
+import { CiCloudMoon, CiCloudSun, CiSquarePlus } from 'react-icons/ci';
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -30,7 +30,7 @@ const Navbar = () => {
       <HStack spacing={2} alignItems={"center"}>
         <Link to={"/create"}>
         <Button>
-          <PlusSquareIcon fontSize={20}/>
+          <CiSquarePlus fontSize={20} />
         </Button>
         </Link>
         <Button onClick={toggleColorMode}>{ colorMode === "light" ? <CiCloudMoon /> : <CiCloudSun size="20" />}
